@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog App</title>
+
+  <link rel="stylesheet" href="./dist/output.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-200 text-gray-600">
+
+  <!-- Navigation__menu__container -->
+  <nav class="bg-white   fixed  top-0 z-10 w-full p-3 drop-shadow-md" x-data="{isSubMenuOpen:false}">
+
+    <!-- flex__container -->
+    <div class="md:flex items-center justify-between md:max-w-xl md:mx-auto">
+
+      <!-- web__container -->
+      <div class="flex items-center justify-between">
+
+        <!-- left__side -->
+        <div class="flex items-center ">
+          <img src="./assets/batman.jpg" class="h-8 w-8 rounded-full bg-contain" alt="">
+          <a href="#" class="text-base hover:text-gray-900 ml-2">Mugerwa</a>
+        </div>
+
+        <!-- right__side -->
+        <div class="md:hidden">
+          <a href="#" class="font-medium" @click="isSubMenuOpen=!isSubMenuOpen">|||</a>
+        </div>
+
+      </div>
+      <!-- web__container -->
+
+
+      <!-- items__container -->
+      <div>
+        <ul class="md:flex flex-row md:space-x-3 mt-4 md:mt-0" :class="isSubMenuOpen?'block':'hidden'">
+          <li><a href="#" class="text-sm hover:text-gray-800 my-1 :md:my-0 font-medium ">Home</a></li>
+          <li><a href="#" class="text-sm hover:text-gray-800 my-1 :md:my-0 font-medium">About Us</a></li>
+          <li><a href="#" class="text-sm hover:text-gray-800 my-1 :md:my-0 font-medium">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- items__container -->
+
+    </div>
+
+    <!-- flex__container -->
+  </nav>
+  <!-- Navigation__menu__container -->
+
+<div class="mx-auto  max-w-xl  mt-[4rem]">
+ 
+
+    <!-- hero__section -->
+    <section id="hero" class="mt-4 ">
+      <!-- card__container -->
+      <div class=" p-4">
+        <!-- card -->
+        <div class="text-center bg-white p-2 rounded shadow-xl space-y-4">
+          <p class="font-bold text-2xl text-gray-900 ">Laravel Developer in Kampala,Uganda</p>
+          <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore quos minima veniam alias sed enim ullam aut
+            quas officiis dignissimos, nemo, optio consequatur laudantium expedita. Molestias repellat asperiores
+            accusamus impedit nesciunt praesentium culpa itaque?</p>
+          <button class="px-3  text-white bg-gray-800 p-1 rounded hover:bg-gray-900">Start Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- hero__section -->
+
+    <template x-data x-for="1 in 3">
+
+      <!-- blog__container -->
+      <div class="p-4">
+        <!-- bog__card -->
+        <div class=" bg-white rounded shadow-md overflow-hidden">
+          <img src="./assets/blog.jpg" class="w-full h-64 object-cover" alt="">
+          <!-- content -->
+          <div class="p-4 space-y-3">
+            <span class="text-xs  text-blue-700">PRODUCT</span>
+            <h1 class="font-bold  capitalize text-gray-900 hover:underline cursor-pointer">I built a successful blog in one year</h1>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore reiciendis ut.</p>
+            
+            <!-- user__information -->
+            <div class="flex items-center  gap-2">
+              <img src="./assets/batman.jpg" class="w-8 h-8 rounded-full" alt="">
+              <div class="flex items-center space-x-4">
+                <span class="font-bold text-xs text-gray-900">John Doe</span>
+                <span class="uppercase text-xs text-gray-900">2 May 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  
+</div>
+  <!-- footer -->
+  <footer class="bg-gray-900 mt-4 ">
+    <div class="max-w-xl mx-auto p-4 space-y-4 ">
+      <h1 class="text-center  text-white ">Join 31,000+ others  and never miss <br>out new tips, tutorials and more.</h1>
+      <div class="flex flex-col md:max-w-sm md:mx-auto text-center bg-white rounded p-1 md:flex-row relative">
+        <input type="text" name="" class="focus:outline-none p-3 md:p-2 focus:placeholder-transparent" placeholder="Enter your email address" id="">
+        <button class="rounded bg-gray-800 p-2 text-white active:outline-none hover:bg-gray-900 md:absolute right-1 top-1">SUBSCRIBE</button>
+      </div>
+      <hr class="text-gray-600">
+
+      <!-- bottom__contaier -->
+      <div class="text-center space-y-3 md:flex  items-center justify-between">
+
+        <h1 class="font-bold text-white text-xl">Mugerwa Obadiah</h1>
+        <ul class="flex space-x-4 items-center justify-center text-white">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
